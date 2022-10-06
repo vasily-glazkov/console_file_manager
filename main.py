@@ -1,3 +1,6 @@
+from bank_account import manage_bank_account
+
+
 def main():
     print("Welcome to the File Manager")
     print("*" * 27)
@@ -16,6 +19,9 @@ def main():
         11. Change working directory.
         12. Quit.
     """)
+    user_choice = input("Your choice: ")
+    if user_choice == "10":
+        manage_bank_account()
 
 
 if __name__ == '__main__':

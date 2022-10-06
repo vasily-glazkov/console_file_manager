@@ -29,22 +29,25 @@ def purchase_history():
         print(f"Вы купили {key} на сумму {value}")
 
 
-while True:
-    print('1. пополнение счета')
-    print('2. покупка')
-    print('3. история покупок')
-    print('4. выход')
+def manage_bank_account():
+    print("Welcome to bank account management!")
+    print("Please pick a menu number below: ")
+    while True:
+        print('1. пополнение счета')
+        print('2. покупка')
+        print('3. история покупок')
+        print('4. выход')
 
-    choice = input('Выберите пункт меню: ')
-    if choice == '1':
-        account['account_value'] = account_refill()
-        print(
-            f"Счет успешно пополнен. На вашем счету {account['account_value']} денег")
-    elif choice == '2':
-        purchase(account['account_value'])
-    elif choice == '3':
-        purchase_history()
-    elif choice == '4':
-        break
-    else:
-        print('Неверный пункт меню')
+        choice = input('Выберите пункт меню: ')
+        if choice == '1':
+            account['account_value'] = account_refill()
+            print(
+                f"Счет успешно пополнен. На вашем счету {account['account_value']} денег")
+        elif choice == '2':
+            purchase(account['account_value'])
+        elif choice == '3':
+            purchase_history()
+        elif choice == '4':
+            break
+        else:
+            print('Неверный пункт меню')
